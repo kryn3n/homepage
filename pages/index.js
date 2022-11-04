@@ -5,7 +5,8 @@ import {
   Image,
   Heading,
   VStack,
-  Link
+  Link,
+  Highlight
 } from '@chakra-ui/react'
 import { CheckIcon, EmailIcon } from '@chakra-ui/icons'
 import { useState } from 'react';
@@ -19,13 +20,13 @@ export default function Home() {
     <>
     <Box bg='gray.200' h='100vh' w='150px' position='absolute' shadow='lg'>
       <VStack spacing='50px' mt={10}>
-        <Text fontSize='xl' color='gray.600' fontWeight='semibold' _hover={{color:'orange.400'}} textAlign='right'>Experience</Text>
-        <Text fontSize='xl' color='gray.600' fontWeight='semibold' _hover={{color:'orange.400'}}>Skills</Text>
-        <Text fontSize='xl' color='gray.600' fontWeight='semibold' _hover={{color:'orange.400'}}>Projects</Text>
-        <Text fontSize='xl' color='gray.600' fontWeight='semibold' _hover={{color:'orange.400'}}>Contact</Text>
+        <Text fontSize='xl' color='gray.600' fontWeight='semibold' _hover={{color:'orange.400'}} textAlign='right'>experience</Text>
+        <Text fontSize='xl' color='gray.600' fontWeight='semibold' _hover={{color:'orange.400'}}>skills</Text>
+        <Text fontSize='xl' color='gray.600' fontWeight='semibold' _hover={{color:'orange.400'}}>projects</Text>
+        <Text fontSize='xl' color='gray.600' fontWeight='semibold' _hover={{color:'orange.400'}}>contact</Text>
         <Link href='https://github.com/krynens/homepage/' isExternal> 
           <Text fontSize='xl' color='gray.600' fontWeight='semibold' _hover={{color:'orange.400'}}>
-            Source
+            source code
           </Text>
         </Link>
       </VStack>
@@ -41,7 +42,7 @@ export default function Home() {
             fontSize='6xl'
             fontWeight='extrabold'
             >
-            Thom Krynen
+            thom krynen
         </Text>
         <Box>
         <Image 
@@ -64,11 +65,21 @@ export default function Home() {
         color='gray.400'
         fontWeight='light'
         fontStyle='italic'
-      >Data Analyst, Data Ops, More...
+      >data analyst / data ops / more...
       </Text>
+      <Box mt={5} mb={5} mr={250} bg='orange.100' rounded='lg'>
+      <Text fontSize='lg' p={1.5}>
+        Hi, my name is Thom! Welcome to my home on the internet. I'm a data analyst with a passion for geospatial data
+      </Text>
+      </Box>
    
       <Heading color='gray.600' mb={5}>
-        Experience
+        <Highlight
+          query={['year, experience', 'thom']}
+          styles={{ px: '0.5', py: '0.5', rounded: 'lg', bg: 'orange.200' }}
+        >
+        SELECT year, experience FROM thom ;
+        </Highlight>
       </Heading>
       <HStack align='top' spacing='20px' mr={250} mb={5}>
       <Text fontSize='xl' fontWeight='black'>2020</Text>
