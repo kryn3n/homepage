@@ -69,7 +69,7 @@ export default function Home() {
       </Text>
       <Box mt={5} mb={5} mr={250} bg='orange.100' rounded='lg'>
       <Text fontSize='lg' p={1.5}>
-        Hi, my name is Thom! Welcome to my home on the internet. I'm a data analyst with a passion for geospatial data
+        Hi, my name is Thom! Welcome to my home on the internet. I&apos;m a data analyst with a passion for geospatial data
       </Text>
       </Box>
    
