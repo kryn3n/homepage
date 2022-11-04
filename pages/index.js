@@ -10,51 +10,48 @@ import {
   Avatar,
   HStack,
   IconButton,
-  Image
+  Image,
+  Heading
 } from '@chakra-ui/react'
 import { CheckIcon, EmailIcon } from '@chakra-ui/icons'
 
 export default function Home() {
   return (
-    <Box bg='gray.50' w='100%' h='100vh'>
-
-      <Center>
+    <Box bg='gray.50' w='100%' h='100vh' pl={200} pr={200}>
+      <HStack>
         <Text
-          bgGradient='linear(to-r, gray.200, gray.400)'
-          _hover={{
-            bgGradient: 'linear(to-r, gray.200, orange.500)',
-          }}
-          bgClip='text'
-          fontSize='6xl'
-          fontWeight='extrabold'
-          >
-          Thom Krynen
+            bgGradient='linear(to-r, gray.200, gray.500)'
+            _hover={{
+              bgGradient: 'linear(to-r, gray.200, orange.500)',
+            }}
+            bgClip='text'
+            fontSize='6xl'
+            fontWeight='extrabold'
+            >
+            Thom Krynen
         </Text>
-      </Center>
-
-      <Center>
-        <Avatar 
-          name='Thom Krynen' 
-          size='lg' 
+        <Image 
+          alt='Thom Krynen' 
+          boxSize='60px' 
           src='/avatar.jpg'
-          mr={5}
-          // border='1px'
+          border='2px'
           // borderWidth='2px'
-          // borderRadius='1'
-          borderColor='white' 
-          />
-        <Box>
-          <Text
-            p={3}
-            fontSize='2xl'
-            color='gray.400'
-            fontWeight='bold'
-          >All Things Data
-          </Text>
-        </Box>
-      </Center>
+          borderRadius='full'
+          borderColor='orange.300' 
+        />
+      </HStack>
+      <Text
+        mt={-3}
+        mb={3}
+        fontSize='2xl'
+        color='gray.400'
+        fontWeight='light'
+        fontStyle='italic'
+      >Data Analyst, Data Ops, More...
+      </Text>
+      {/* </Center> */}
 
-      <Center>
+      {/* <Center>
         <HStack>
           <EmailIcon color='gray.600'/>
           <Image 
@@ -63,26 +60,28 @@ export default function Home() {
             alt='LinkedIn Logo'
             src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png'/>
         </HStack>
-      </Center>
+      </Center> */}
       
-      <Box 
-        shadow='inner' 
-        ml={100} 
-        mr={100} 
-        mt={10}
-        p={10} rounded='2xl'>
-      <Center>
-        <List>
-          <ListItem>
-            <ListIcon as={CheckIcon} color='green.500' />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit
-          </ListItem>
+      <Heading color='gray.600' mb={5}>
+        Experience
+      </Heading>
+      <HStack align='top' spacing='20px' mr={250} mb={5}>
+      <Text fontSize='xl' fontWeight='black'>2020</Text>
+      <Text fontSize='lg'>Hired as Statutory Planner for Casey City Council.</Text>
+      </HStack>
 
-          <ListItem>Test 2</ListItem>
-          <ListItem>Test 3</ListItem>
-        </List>
-      </Center>
-      </Box>
+      <HStack align='top' spacing='20px' mr={250} mb={5}>
+      <Text fontSize='xl' fontWeight='black'>2021</Text>
+      <Text fontSize='lg'>Hired as Graduate Planner for LandTech (second Aus employee). Begin working on Australian expansion with a keen focus on spatial data, ranging from land zoning to hazards such as bushfire and flood.</Text>
+      </HStack>
+
+      <HStack align='top' spacing='20px' mr={250}>
+      <Text fontSize='xl' fontWeight='black'>2021</Text>
+      <Text fontSize='lg'>Promoted to Associate Data Analyst at LandTech. Focus shifts from Australian expansion to launching in the United States.</Text>
+      </HStack>
+
+      <Text fontSize='xl'>2021 - Associate Data Analyst, LandTech</Text>
+      <Text fontSize='xl'>2022 - Data Analyst, LandTech</Text>
 
     </Box>
   )
