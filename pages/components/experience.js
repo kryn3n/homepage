@@ -15,7 +15,7 @@ export default function Experience() {
         </Text>
 
         <Link
-            href='/adopted.pdf'
+            href='/pdf-test.pdf'
             isExternal>
             <Heading color={useColorModeValue('gray.600', 'white')} mb={5}>
             <Highlight
