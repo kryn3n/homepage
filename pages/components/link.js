@@ -5,7 +5,11 @@ import {
 
 export default function SidebarLink(props) {
     return(
-        <Link>
+        <Link 
+            href={props.id === 'source code' ? 
+            'https://www.github.com/krynens/homepage/'
+            : null}
+            isExternal>
             <Text 
                 id={props.id}
                 fontSize='xl'
@@ -13,7 +17,9 @@ export default function SidebarLink(props) {
                 fontWeight='semibold' 
                 _hover={{color:'orange.400'}} 
                 textAlign='right'
-                onClick={() => props.setPage(props.id)}
+                onClick={
+                    props.id === 'source code' ? null
+                    : () => props.setPage(props.id)}
                 >{props.id}
             </Text>
         </Link>

@@ -18,7 +18,7 @@ export default function Home() {
           <Experience />
         : page === 'skills' ?
           <Skills />
-        : <h1>Loading</h1>
+        : null
         }
       </Box>
     </>

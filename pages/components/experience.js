@@ -26,7 +26,7 @@ export default function Experience() {
 
         <HStack align='top' spacing='20px' mr={250} mb={5}>
             <Text fontSize='xl' fontWeight='black'>2020</Text>
-            <Text fontSize='lg'>Graduate RMIT University, BA Urban & Regional Planning (BURP, lol) with 1st Class Honours</Text>
+            <Text fontSize='lg'>Graduate RMIT University, BA Urban & Regional Planning (BURP 😉) with 1st Class Honours</Text>
         </HStack>
 
         <HStack align='top' spacing='20px' mr={250} mb={5}>
