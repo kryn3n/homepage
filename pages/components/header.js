@@ -3,7 +3,9 @@ import {
     Box,
     Text,
     HStack,
-    Image
+    Image,
+    Heading,
+    useColorModeValue
   } from '@chakra-ui/react'
 
 export default function Header(){
@@ -16,42 +18,47 @@ export default function Header(){
             onMouseEnter={() => setImage(image2)}
             onMouseOut={() => setImage(image1)}>
             <HStack spacing='15px'>
-                <Text
+                <Heading
+                    size='4xl'
                     bgGradient='linear(to-r, gray.200, gray.500)'
                     _hover={{
-                    bgGradient: 'linear(to-r, gray.200, orange.500)',
+                    bgGradient: useColorModeValue('linear(to-r, gray.200, orange.500)', 'linear(to-r, gray.200, purple.400)'),
                     }}
                     bgClip='text'
-                    fontSize='6xl'
                     fontWeight='extrabold'
                     >
                     thom krynen
-                </Text>
+                </Heading>
                 <Image 
                 alt='Thom Krynen' 
                 boxSize='60px' 
                 src={image}
                 border='2px'
                 borderRadius='full'
-                borderColor='orange.300' 
+                borderColor={useColorModeValue('orange.300', 'purple.300')}
                 align='bottom'
                 />
-        </HStack>
-      </Box>
+            </HStack>
+        </Box>
 
       <Text
-        mt={-3}
         mb={3}
         fontSize='2xl'
-        color='gray.400'
+        color={useColorModeValue('gray.400', 'white')}
         fontWeight='light'
         fontStyle='italic'
       >data analyst / data ops / more...
       </Text>
 
-      <Box mt={5} mb={5} mr={250} bg='orange.100' rounded='lg'>
+      <Box 
+        mt={5} 
+        mb={5} 
+        mr={250} 
+        bg={useColorModeValue("orange.100", "purple.400")}
+        rounded='lg'>
         <Text fontSize='lg' p={1.5}>
-            Hi, my name is Thom! Welcome to my home on the internet. I&apos;m a data analyst with a passion for geospatial data
+            Hi, my name is Thom! Welcome to my home on the internet. 
+            I&apos;m a data analyst with a passion for geospatial data
         </Text>
       </Box>
       </>

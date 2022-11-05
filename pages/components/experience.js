@@ -3,7 +3,8 @@ import {
     HStack,
     Heading,
     Link,
-    Highlight
+    Highlight,
+    useColorModeValue
   } from '@chakra-ui/react'
 
 export default function Experience() {
@@ -14,10 +15,10 @@ export default function Experience() {
         </Text>
 
         <Link>
-            <Heading color='gray.600' mb={5}>
+            <Heading color={useColorModeValue('gray.600', 'white')} mb={5}>
             <Highlight
                 query={['year, experience', 'thom']}
-                styles={{ color: 'orange.400', fontStyle: 'italic' }}
+                styles={{ color: useColorModeValue('orange.400', 'purple.300'), fontStyle: 'italic' }}
             >
             SELECT year, experience FROM thom ;
             </Highlight>

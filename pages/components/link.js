@@ -1,6 +1,7 @@
 import {
     Text,
-    Link
+    Link,
+    useColorModeValue
   } from '@chakra-ui/react'
 
 export default function SidebarLink(props) {
@@ -13,9 +14,11 @@ export default function SidebarLink(props) {
             <Text 
                 id={props.id}
                 fontSize='xl'
-                color={props.page === props.id ? 'orange.400' : 'gray.600'}
+                color={props.page === props.id 
+                    ? useColorModeValue('orange.400','purple.600') 
+                    : 'gray.600'}
                 fontWeight='semibold' 
-                _hover={{color:'orange.400'}} 
+                _hover={{color: useColorModeValue('orange.400','purple.600')}} 
                 textAlign='right'
                 onClick={
                     props.id === 'source code' ? null
