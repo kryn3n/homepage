@@ -2,6 +2,7 @@ import {
   Box, useColorModeValue
 } from '@chakra-ui/react'
 import { useState } from 'react';
+import Contact from './components/contact';
 import Experience from './components/experience';
 import Header from './components/header';
 import Sidebar from './components/sidebar';
@@ -13,7 +14,7 @@ export default function Home() {
     <>
       <Sidebar page={page} setPage={setPage} />
       <Box 
-        bg={useColorModeValue("gray.50", "gray.500")}
+        bg={useColorModeValue("gray.50", "gray.700")}
         w='100vw' 
         h='100vh' 
         pl={200} 
@@ -23,7 +24,9 @@ export default function Home() {
           <Experience />
         : page === 'skills' ?
           <Skills />
-        : null
+        : page === 'contact' ?
+          <Contact />
+        : <h1>Loading...</h1>
         }
       </Box>
     </>

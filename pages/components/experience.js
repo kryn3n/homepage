@@ -14,7 +14,9 @@ export default function Experience() {
         Download my CV 👇
         </Text>
 
-        <Link>
+        <Link
+            href='/adopted.pdf'
+            isExternal>
             <Heading color={useColorModeValue('gray.600', 'white')} mb={5}>
             <Highlight
                 query={['year, experience', 'thom']}

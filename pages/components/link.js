@@ -14,10 +14,15 @@ export default function SidebarLink(props) {
             <Text 
                 id={props.id}
                 fontSize='xl'
-                color={props.page === props.id 
-                    ? useColorModeValue('orange.400','purple.600') 
-                    : 'gray.600'}
-                fontWeight='semibold' 
+                color={useColorModeValue(
+                    props.page === props.id
+                    ? 'orange.400'
+                    : 'gray.600',
+                    props.page === props.id
+                    ? 'purple.600'
+                    : 'gray.600'
+                )}
+                fontWeight='bold' 
                 _hover={{color: useColorModeValue('orange.400','purple.600')}} 
                 textAlign='right'
                 onClick={
