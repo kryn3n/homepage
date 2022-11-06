@@ -59,6 +59,7 @@ export default function Header(){
         <Text fontSize='lg' p={1.5}>
             Hi, my name is Thom! Welcome to my home on the internet. 
             I&apos;m a data analyst with a passion for geospatial data
+            and Python automation.
         </Text>
       </Box>
       </>

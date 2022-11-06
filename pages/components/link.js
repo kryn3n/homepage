@@ -8,7 +8,7 @@ export default function SidebarLink(props) {
     return(
         <Link 
             href={props.id === 'source code' ? 
-            'https://www.github.com/krynens/homepage/'
+            'https://www.github.com/kryn3n/homepage/'
             : null}
             isExternal>
             <Text 
