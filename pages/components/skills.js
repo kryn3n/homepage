@@ -43,7 +43,7 @@ export default function Skills(){
             </Highlight>
         </Heading>
         <VStack alignItems='right' alignContent='right' position='absolute'>
-            {skill(name='dbt', 'Proficient in Fishtown Analytics\'', ['in'])}
+            {skill('dbt', 'Proficient in Fishtown Analytics\'', ['in'])}
         </VStack>
 {/* 
         <HStack align='top' spacing='20px' mr={250} mb={5}>
